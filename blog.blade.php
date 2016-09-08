@@ -1,27 +1,26 @@
 @extends('theme::layouts.blog')
 
-@section('title', 'Clean Blog')
+@section('title', cms('site.name'))
 
 @section('body_classes')
 
 @section('header')
-<header class="intro-header" style="background-image: url('img/home-bg.jpg')"><div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <div class="site-heading">
-                    <h1>{{ cms('site.name') }}</h1>
-                    <hr class="small">
-                    <span class="subheading">{{ cms('site.description') }}</span>
+    <header class="intro-header" style="background-image: url('img/home-bg.jpg')"><div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading">
+                        <h1>{{ cms('site.name') }}</h1>
+                        <hr class="small">
+                        <span class="subheading">{{ cms('site.description') }}</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
+    </header>
 @stop
 
 @section('content')
-
-<div class="container">
+    <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <div class="post-preview">
@@ -65,11 +64,12 @@
                     </a>
                     <p class="post-meta">Posted by <a href="{{ URL::to('#') }}">Start Bootstrap</a> on July 8, 2014</p>
                 </div>
-                <hr><!-- Pager --><ul class="pager"><li class="next">
+                <hr><!-- Pager -->
+                <ul class="pager">
+                    <li class="next">
                         <a href="{{ URL::to('#') }}">Older Posts →</a>
                     </li>
                 </ul></div>
         </div>
     </div>
-
 @stop
